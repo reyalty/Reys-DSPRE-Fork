@@ -84,6 +84,8 @@ namespace DSPRE
         public static readonly byte internalNameLength = 16;
         public static string internalNamesPath { get; private set; }
 
+        public static string exportedScriptsPath { get; private set; }
+
         public static int cameraSize { get; private set; }
 
         public Dictionary<List<uint>, (Color background, Color foreground)> MapCellsColorDictionary;
@@ -152,6 +154,7 @@ namespace DSPRE
             OWSprites,
 
             scripts,
+            script_export,
 
             encounters,
             headbutt,
@@ -193,6 +196,7 @@ namespace DSPRE
             headerPath = Path.Combine(workDir, @"header.bin");
             unpackedPath = Path.Combine(workDir, @"unpacked");
             internalNamesPath = Path.Combine(workDir, $@"{dataFolderName}\fielddata\maptable\mapname.bin");
+            exportedScriptsPath = Path.Combine(workDir, @"../script_export");
 
             try
             {

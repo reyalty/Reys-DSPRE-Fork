@@ -255,6 +255,7 @@
             this.zBuildUpDown = new System.Windows.Forms.NumericUpDown();
             this.buildingsListBox = new System.Windows.Forms.ListBox();
             this.permissionsTabPage = new System.Windows.Forms.TabPage();
+            this.transparencyBar = new System.Windows.Forms.TrackBar();
             this.scanUnusedCollisionTypesButton = new System.Windows.Forms.Button();
             this.clearCurrentButton = new System.Windows.Forms.Button();
             this.typeLabel = new System.Windows.Forms.Label();
@@ -788,9 +789,11 @@
             this.openROMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveROMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.romToolboxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.headerSearchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addressHelperToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.scriptCommandsDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diamondAndPearlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.platinumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -916,6 +919,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.xBuildUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zBuildUpDown)).BeginInit();
             this.permissionsTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.transparencyBar)).BeginInit();
             this.typeGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.typePainterUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typePainterPictureBox)).BeginInit();
@@ -3822,6 +3826,7 @@
             // 
             // permissionsTabPage
             // 
+            this.permissionsTabPage.Controls.Add(this.transparencyBar);
             this.permissionsTabPage.Controls.Add(this.scanUnusedCollisionTypesButton);
             this.permissionsTabPage.Controls.Add(this.clearCurrentButton);
             this.permissionsTabPage.Controls.Add(this.typeLabel);
@@ -3839,6 +3844,19 @@
             this.permissionsTabPage.TabIndex = 1;
             this.permissionsTabPage.Text = "Move Permissions";
             this.permissionsTabPage.UseVisualStyleBackColor = true;
+            // 
+            // transparencyBar
+            // 
+            this.transparencyBar.BackColor = System.Drawing.SystemColors.Menu;
+            this.transparencyBar.Location = new System.Drawing.Point(12, 391);
+            this.transparencyBar.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
+            this.transparencyBar.Maximum = 255;
+            this.transparencyBar.Name = "transparencyBar";
+            this.transparencyBar.Size = new System.Drawing.Size(445, 45);
+            this.transparencyBar.TabIndex = 42;
+            this.transparencyBar.TickFrequency = 255;
+            this.transparencyBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.transparencyBar.Scroll += new System.EventHandler(this.transparencyBar_Scroll);
             // 
             // scanUnusedCollisionTypesButton
             // 
@@ -4341,7 +4359,7 @@
             this.radio3D.AutoSize = true;
             this.radio3D.Checked = true;
             this.radio3D.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.radio3D.Location = new System.Drawing.Point(147, -566);
+            this.radio3D.Location = new System.Drawing.Point(147, 566);
             this.radio3D.Name = "radio3D";
             this.radio3D.Size = new System.Drawing.Size(31, 23);
             this.radio3D.TabIndex = 26;
@@ -4356,7 +4374,7 @@
             this.radio2D.Appearance = System.Windows.Forms.Appearance.Button;
             this.radio2D.AutoSize = true;
             this.radio2D.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.radio2D.Location = new System.Drawing.Point(147, -595);
+            this.radio2D.Location = new System.Drawing.Point(147, 595);
             this.radio2D.Name = "radio2D";
             this.radio2D.Size = new System.Drawing.Size(31, 23);
             this.radio2D.TabIndex = 25;
@@ -4371,7 +4389,7 @@
             this.wireframeCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
             this.wireframeCheckBox.AutoSize = true;
             this.wireframeCheckBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.wireframeCheckBox.Location = new System.Drawing.Point(1140, -537);
+            this.wireframeCheckBox.Location = new System.Drawing.Point(1140, 537);
             this.wireframeCheckBox.Name = "wireframeCheckBox";
             this.wireframeCheckBox.Size = new System.Drawing.Size(31, 23);
             this.wireframeCheckBox.TabIndex = 27;
@@ -10193,7 +10211,8 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openROMToolStripMenuItem,
             this.openFolderToolStripMenuItem,
-            this.saveROMToolStripMenuItem});
+            this.saveROMToolStripMenuItem,
+            this.settingsToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
@@ -10226,11 +10245,22 @@
             this.saveROMToolStripMenuItem.Text = "Save ROM";
             this.saveROMToolStripMenuItem.Click += new System.EventHandler(this.saveRom_Click);
             // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Image = global::DSPRE.Properties.Resources.wrenchIcon;
+            this.settingsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.RightToLeftAutoMirrorImage = true;
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(155, 38);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
+            // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.romToolboxToolStripMenuItem,
             this.headerSearchToolStripMenuItem,
+            this.addressHelperToolStripMenuItem,
             this.scriptCommandsDatabaseToolStripMenuItem,
             this.NarcUtilityToolStripMenuItem,
             this.listBasedBatchRenameToolStripMenuItem,
@@ -10255,6 +10285,14 @@
             this.headerSearchToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.headerSearchToolStripMenuItem.Text = "Advanced Header Search";
             this.headerSearchToolStripMenuItem.Click += new System.EventHandler(this.advancedHeaderSearchToolStripMenuItem_Click);
+            // 
+            // addressHelperToolStripMenuItem
+            // 
+            this.addressHelperToolStripMenuItem.Enabled = false;
+            this.addressHelperToolStripMenuItem.Name = "addressHelperToolStripMenuItem";
+            this.addressHelperToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
+            this.addressHelperToolStripMenuItem.Text = "Address Helper";
+            this.addressHelperToolStripMenuItem.Click += new System.EventHandler(this.addressHelperToolStripMenuItem_Click);
             // 
             // scriptCommandsDatabaseToolStripMenuItem
             // 
@@ -10966,6 +11004,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.zBuildUpDown)).EndInit();
             this.permissionsTabPage.ResumeLayout(false);
             this.permissionsTabPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.transparencyBar)).EndInit();
             this.typeGroupBox.ResumeLayout(false);
             this.typeGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.typePainterUpDown)).EndInit();
@@ -12002,6 +12041,9 @@
         private System.Windows.Forms.ToolStripMenuItem overlayEditorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem spawnEditorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem moveDataEditorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        private System.Windows.Forms.TrackBar transparencyBar;
+        private System.Windows.Forms.ToolStripMenuItem addressHelperToolStripMenuItem;
     }
 }
 

@@ -95,6 +95,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddressHelper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddressHelper.Designer.cs">
+      <DependentUpon>AddressHelper.cs</DependentUpon>
+    </Compile>
     <Compile Include="DSUtils\ARM9.cs" />
     <Compile Include="DSUtils\DSUtils.cs" />
     <Compile Include="DSUtils\ModelUtils.cs" />
@@ -179,6 +185,12 @@
     <Compile Include="ExtensionMethods.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Filesystem.cs" />
+    <Compile Include="settingsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="settingsWindow.Designer.cs">
+      <DependentUpon>settingsWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameCamera.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="InputComboBox.cs">
@@ -285,6 +297,13 @@
       <DependentUpon>ScriptTooltip.cs</DependentUpon>
     </Compile>
     <Compile Include="ScintillaUtils\SearchManager.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SettingsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsWindow.Designer.cs">
+      <DependentUpon>SettingsWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="SpawnEditor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -374,6 +393,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\writeText.Designer.cs" />
+    <EmbeddedResource Include="AddressHelper.resx">
+      <DependentUpon>AddressHelper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DVCalculator\DVCalc.resx" />
     <EmbeddedResource Include="DVCalculator\DVCalcNatureViewerForm.resx" />
     <EmbeddedResource Include="Editors\EncountersEditor.resx">
@@ -563,6 +585,8 @@
     <None Include="Resources\Graphics\Program Icons\exploreKit.png" />
     <None Include="Resources\Graphics\Program Icons\buildingEditorButton.png" />
     <None Include="Resources\alphabgCheckerboard.png" />
+    <None Include="Resources\code_70x70.png" />
+    <None Include="Resources\code_70x701.png" />
     <Content Include="Resources\Graphics\Area Icons\hgsslake.png" />
     <Content Include="Resources\Graphics\Camera Angles\DPPt\dpcamera0.png" />
     <Content Include="Resources\Graphics\Camera Angles\DPPt\dpcamera1.png" />
