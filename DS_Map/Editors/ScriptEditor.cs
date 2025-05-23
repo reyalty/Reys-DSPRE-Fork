@@ -1100,6 +1100,7 @@ namespace DSPRE.Editors {
             } else if (containerType == ScriptFile.ContainerTypes.Action) {
                 displaySearchResult(actionsTabPage, actionSearchManager, searchResult);
             }
+            
         }
 
         private void displaySearchResult(TabPage tabPage, SearchManager searchManager, ScriptEditorSearchResult searchResult) {
