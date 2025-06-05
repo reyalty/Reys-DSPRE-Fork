@@ -116,6 +116,12 @@
     <Compile Include="DVCalculator\DVCalcNatureViewerForm.Designer.cs" />
     <Compile Include="DVCalculator\DVCalculator.cs" />
     <Compile Include="EditorPanels.cs" />
+    <Compile Include="Editors\BtxEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editors\BtxEditor.Designer.cs">
+      <DependentUpon>BtxEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Editors\EncountersEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -185,6 +191,7 @@
     <Compile Include="ExtensionMethods.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Filesystem.cs" />
+    <Compile Include="LibNDSFormats\BTX0.cs" />
     <Compile Include="settingsWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -398,6 +405,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DVCalculator\DVCalc.resx" />
     <EmbeddedResource Include="DVCalculator\DVCalcNatureViewerForm.resx" />
+    <EmbeddedResource Include="Editors\BtxEditor.resx">
+      <DependentUpon>BtxEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Editors\EncountersEditor.resx">
       <DependentUpon>EncountersEditor.cs</DependentUpon>
     </EmbeddedResource>
