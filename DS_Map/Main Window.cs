@@ -9998,5 +9998,11 @@ namespace DSPRE {
         }
 
 
+        private void overworldEditorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BtxEditor form = new BtxEditor();
+            form.Show();
+        }
+
     }
 }
